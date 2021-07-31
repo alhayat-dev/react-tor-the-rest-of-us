@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDom from "react-dom"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 // My Components
 
@@ -11,11 +12,21 @@ import Terms from "./components/Terms"
 
 function Main() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <About />
+      <Switch>
+        <Route path="/" exact>
+          <HomeGuest />
+        </Route>
+        <Route path="/about-us">
+          <About />
+        </Route>
+        <Route path="/terms">
+          <Terms />
+        </Route>
+      </Switch>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 
