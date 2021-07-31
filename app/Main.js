@@ -1,13 +1,24 @@
 import React from "react"
 import ReactDom from "react-dom"
 
-function ExampleComponent() {
+// My Components
+
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import HomeGuest from "./components/HomeGuest"
+
+function Main() {
   return (
-    <div>
-      <h1>This is our app!!</h1>
-      <p>The sky is blue.</p>
-    </div>
+    <>
+      <Header />
+      <HomeGuest />
+      <Footer />
+    </>
   )
 }
 
-ReactDom.render(<ExampleComponent />, document.querySelector("#id"))
+ReactDom.render(<Main />, document.querySelector("#app"))
+
+if (module.hot) {
+  module.hot.accept()
+}
