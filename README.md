@@ -18,3 +18,25 @@ Step 3: Create folder with the name of app and created two files in it . index.h
 Step 4: Add webpack.config.js starter template.
 
 Step 5: Install packages present in the webpack.config.json
+
+Step 6: Add the following snippet in vscodefor javascriptreact
+
+{
+"React Component" : {
+"prefix": "rc",
+"body": [
+"import React, { useEffect } from \"react\"",
+"",
+"function ${1:ComponentName}() {",
+" return (",
+" <>",
+" $2",
+" </>",
+" )",
+"}",
+"",
+"export default ${1:ComponentName}"
+],
+"description": "React Component"
+}
+}
